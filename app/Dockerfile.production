@@ -8,4 +8,8 @@ RUN npm ci
 
 COPY . .
 
-CMD make dev
+EXPOSE 8080
+ENV NODE_ENV=production
+RUN make build
+
+CMD make start

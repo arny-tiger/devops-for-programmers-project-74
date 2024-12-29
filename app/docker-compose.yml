@@ -1,6 +1,6 @@
 services:
   app:
+    image: brodyaga30/devops-for-programmers-project-74
     build:
-      dockerfile: Dockerfile
-    volumes:
-      - .:/app
+      dockerfile: Dockerfile.production
+    command: make test
