@@ -2,7 +2,8 @@ services:
   app:
     image: brodyaga30/devops-for-programmers-project-74
     build:
-      dockerfile: Dockerfile.production
+      context: ./app
+      dockerfile: ../Dockerfile.production
     command: make test
     environment:
       - DATABASE_HOST=${DATABASE_HOST}
