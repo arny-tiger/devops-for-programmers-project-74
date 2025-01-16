@@ -24,7 +24,7 @@ jobs:
               uses: docker/build-push-action@v3
               with:
                 context: app
-                file: app/Dockerfile.production
+                file: Dockerfile.production
                 push: false
                 tags: ${{ env.APP_IMAGE_NAME }}:latest
                 load: true
