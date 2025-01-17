@@ -2,8 +2,8 @@ services:
   app:
     image: brodyaga30/devops-for-programmers-project-74
     build:
-      context: ./app
-      dockerfile: ../Dockerfile.production
+      context: .
+      dockerfile: Dockerfile.production
     command: make test
     env_file:
       - app/.env
