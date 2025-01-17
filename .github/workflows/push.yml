@@ -16,10 +16,10 @@ jobs:
 
             - name: Create .env file
               run: |
-                echo "DATABASE_HOST=db" > app/.env
-                echo "DATABASE_NAME=postgres" >> app/.env
-                echo "DATABASE_USERNAME=postgres" >> app/.env
-                echo "DATABASE_PASSWORD=password" >> app/.env
+                echo "DATABASE_HOST=db" > .env
+                echo "DATABASE_NAME=postgres" >> .env
+                echo "DATABASE_USERNAME=postgres" >> .env
+                echo "DATABASE_PASSWORD=password" >> .env
 
             - name: Install Docker Compose
               run: |
@@ -37,7 +37,6 @@ jobs:
                 load: true
 
             - name: Run tests
-              working-directory: app
               run: make ci    
             
             - name: Login Dockerhub
