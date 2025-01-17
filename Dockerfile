@@ -6,6 +6,6 @@ COPY app/package-lock.json package-lock.json
 
 RUN npm ci
 
-COPY app/ .
+COPY app/. .
 
 CMD make dev

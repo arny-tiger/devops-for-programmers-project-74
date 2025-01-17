@@ -5,15 +5,11 @@ services:
       context: .
       dockerfile: Dockerfile.production
     command: make test
-    env_file:
-      - app/.env
     depends_on:
       db:
         condition: service_healthy
   db:
     image: postgres:latest
-    env_file:
-      - app/.env
     environment:
       - POSTGRES_USER=${DATABASE_USERNAME}
       - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
