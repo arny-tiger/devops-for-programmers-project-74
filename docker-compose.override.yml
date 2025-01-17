@@ -14,7 +14,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "443:443/udp"
     volumes:
       - ./app/services/caddy:/etc/caddy
       - caddy_data:/data
