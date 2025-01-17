@@ -14,12 +14,11 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - name: Create .env file
-              run: |
-                echo "DATABASE_HOST=db" > .env
-                echo "DATABASE_NAME=postgres" >> .env
-                echo "DATABASE_USERNAME=postgres" >> .env
-                echo "DATABASE_PASSWORD=password" >> .env
+            - name: Create .env file for docker
+              run: cp .env.example .env
+
+            - name: Create .env file for app
+              run: cp app/.env.example app/.env
 
             - name: Install Docker Compose
               run: |
