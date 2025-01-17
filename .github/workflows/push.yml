@@ -30,7 +30,7 @@ jobs:
             - name: Build image without push
               uses: docker/build-push-action@v3
               with:
-                context: app
+                context: .
                 file: Dockerfile.production
                 push: false
                 tags: ${{ env.APP_IMAGE_NAME }}:latest
