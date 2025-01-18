@@ -8,4 +8,4 @@ RUN npm ci
 
 COPY app/. .
 
-CMD make dev
+CMD ["make", "dev"]
