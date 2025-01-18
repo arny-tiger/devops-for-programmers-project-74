@@ -5,5 +5,9 @@
 
 Dockerhub: https://hub.docker.com/repository/docker/brodyaga30/devops-for-programmers-project-74/general
 
-Start: docker compose up
-CI: cd app && make ci
+Commands:
+make ci - run tests
+make lint - run linter check
+make build - build production image
+make build-dev - build dev image
+make up-dev - run application
