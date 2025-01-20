@@ -1,10 +1,10 @@
-ci:
+compose-ci:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
-lint:
-	docker compose -f docker-compose.yml run app make lint
-build:
+compose-lint:
+	docker-compose -f docker-compose.yml run app make lint
+compose-build:
 	docker-compose -f docker-compose.yml build
-build-dev:
+compose-build-dev:
 	docker-compose build
-up-dev:
+compose-up:
 	docker-compose up
